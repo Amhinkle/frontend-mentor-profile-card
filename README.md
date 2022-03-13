@@ -8,7 +8,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Live Site URL: [here](https://your-live-site-url.com)
+- Live Site URL: [here](https://fem-profile-card-alexis.netlify.app)
 
 ### Built with
 
