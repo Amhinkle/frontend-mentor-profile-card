@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 99%;
+  background-color: #19a2ae;
+  font-family: "Kumbh Sans", sans-serif;
+  overflow: hidden;
+}
+@media (max-width: 450px) {
+  body {
+    height: 800px;
+    width: 450px;
+  }
+}
+
+.bubble__top {
+  position: relative;
+  right: 30rem;
+  top: 16rem;
+}
+.bubble__bottom {
+  position: relative;
+  left: 30rem;
+  bottom: 16rem;
+  transition: 300ms ease-in-out;
+}
+@media (max-width: 450px) {
+  .bubble__bottom {
+    right: 30rem;
+    bottom: 20rem;
+    transition: 300ms ease-in-out;
+  }
+}
+
+.card {
+  position: relative;
+  width: 352px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 50px #2d3248;
+  cursor: pointer;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .card {
+    width: 335px;
+  }
+}
+.card__picture {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 144px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.card__picture img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 96px;
+  height: 96px;
+  transform: translateY(50%);
+}
+.card__content {
+  text-align: center;
+  padding-top: 45px;
+}
+.card__content h1 {
+  font-size: 1.125rem;
+  font-weight: 1.125rem;
+}
+.card__content h2 {
+  font-size: 1.125rem;
+  font-weight: 1.125rem;
+}
+.card__content p {
+  font-size: 0.875rem;
+  color: #6a6f81;
+  margin-top: 0;
+  padding-bottom: 10px;
+}
+.card__content .line {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.card__content .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__content .info h1 {
+  padding-right: 10px;
+}
+.card__content .info span {
+  color: #6a6f81;
+}
+
+.card__stats {
+  display: grid;
+  grid-template-columns: 117.33px 117.33px 117.33px;
+  text-align: center;
+}
+
+.card__column {
+  height: 100px;
+  padding-top: 15px;
+}
+.card__column p {
+  margin-top: -7px;
+  color: #969696;
+}/*# sourceMappingURL=style.css.map */

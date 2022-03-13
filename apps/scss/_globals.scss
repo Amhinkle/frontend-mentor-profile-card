@@ -1,0 +1,136 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 99%;
+    background-color: $darkCyan;
+    font-family: $fontFamily;
+    overflow: hidden;
+
+    @media (max-width: 450px){
+        height: 800px;
+        width: 450px;
+    }
+}
+
+.bubble{
+
+    &__top{
+        position: relative;
+        right: 30rem;
+        top: 16rem;
+    }
+
+    &__bottom{
+        position: relative;
+        left: 30rem;
+        bottom: 16rem;
+        transition: 300ms ease-in-out;
+
+        @media (max-width: 450px){
+            right: 30rem;
+            bottom: 20rem;
+            transition: 300ms ease-in-out;
+        }
+    }
+}
+
+.card{
+    position: relative;
+	width: 352px;
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 0 0 50px $veryDarkDesaturatedBlue;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (max-width: 600px){
+        width: 335px;
+    }
+
+    &__picture{
+        background-image: url(/images/bg-pattern-card.svg);
+	    height: 144px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img{
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 96px;
+            height: 96px;
+            transform: translateY(50%);
+        }
+    }
+
+    &__content{
+        text-align: center;
+        padding-top: 45px;
+
+        h1{
+            font-size: $fontBody;
+            font-weight: $fontBody;
+        }
+
+        h2{
+            font-size: $fontBody;
+            font-weight: $fontBody;
+        }
+
+        p{
+            font-size: $fontOther;
+            color: $darkGrayishBlue;
+            margin-top: 0;
+            padding-bottom: 10px;
+        }
+
+        .line{
+           border-bottom: .5px solid rgba(0, 0, 0, .1);
+        }
+
+        .info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            h1{
+                padding-right: 10px;
+            }
+
+            span{
+                color: $darkGrayishBlue;
+            }
+        }
+    }
+
+}
+
+.card__stats{
+    display: grid;
+    grid-template-columns: 117.33px 117.33px 117.33px;
+    text-align: center;
+}
+
+.card__column{
+    height: 100px;
+    padding-top: 15px;
+
+    p{
+        margin-top: -7px;
+        color: $darkGray;
+    }
+}
+
+
